@@ -1,2 +1,34 @@
-# wazuh-agent-helm
-Helm chart to deploy wazuh-agent as daemonset on Kubernetes
+Wazuh Agent Helm Chart
+
+Deploy Wazuh Agent as a DaemonSet in Kubernetes using Helm.
+
+Repository
+
+helm repo add wazuh-agent https://YOUR_GITHUB_USERNAME.github.io/wazuh-agent-chart/
+helm repo update
+
+Installation
+
+Install the chart with default values:
+
+helm install wazuh-agent wazuh-agent/wazuh-agent \
+  --set manager.host=your-managers-ip \
+  --set image.tag=4.13.1
+
+
+This will deploy a Wazuh Agent DaemonSet on all nodes in your cluster.
+
+Values
+Key	Type	Default	Description
+namespace	string	wazuh-agent	Namespace where the DaemonSet is deployed
+image.repository	string	wazuh/wazuh-agent	Wazuh Agent image repository
+image.tag	string	4.13.1	Image tag/version
+image.pullPolicy	string	IfNotPresent	Image pull policy
+manager.host	string	your-managers-ip	Wazuh Manager hostname or IP
+manager.port	int	1514	Wazuh Manager port
+securityContext.runAsUser	int	0	User ID to run container
+securityContext.privileged	bool	true	Whether to run container in privileged mode
+nodeSelector	map	{}	Node selector labels
+tolerations	list	[]	Pod tolerations
+affinity	map	{}	Pod affinity rules
+resources	map	{}	Resource requests/limits
