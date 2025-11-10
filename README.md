@@ -14,8 +14,7 @@ helm repo update
 Installation
 Install the chart with default values:
 
-bash
-Copy code
+```bash
 helm install wazuh-agent wazuh-agent/wazuh-agent \
   --set manager.host=your-managers-ip \
   --set image.tag=4.13.1
