@@ -13,11 +13,13 @@ helm repo add wazuh-agent https://YOUR_GITHUB_USERNAME.github.io/wazuh-agent-cha
 helm repo update
 Installation
 Install the chart with default values:
+```
 
 ```bash
 helm install wazuh-agent wazuh-agent/wazuh-agent \
   --set manager.host=your-managers-ip \
   --set image.tag=4.13.1
+```
 This will deploy a Wazuh Agent DaemonSet on all nodes in your cluster.
 
 Values
