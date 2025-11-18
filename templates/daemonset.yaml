@@ -14,7 +14,7 @@ spec:
       labels:
         app: {{ include "wazuh-agent.name" . }}
     spec:
-      hostPID: true
+      hostPID: false
       hostNetwork: true
       containers:
         - name: wazuh-agent
@@ -53,4 +53,3 @@ spec:
       nodeSelector: {{- toYaml .Values.nodeSelector | nindent 8 }}
       tolerations: {{- toYaml .Values.tolerations | nindent 8 }}
       affinity: {{- toYaml .Values.affinity | nindent 8 }}
-
