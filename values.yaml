@@ -13,6 +13,9 @@ securityContext:
   runAsUser: 0
   privileged: true
 
+agent:
+  group: default
+
 resources: {}
 
 nodeSelector: {}

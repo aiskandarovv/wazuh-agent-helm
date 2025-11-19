@@ -32,6 +32,8 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: WAZUH_AGENT_GROUP
+              value: "{{ .Values.agent.group }}"
           volumeMounts:
             - name: var-run
               mountPath: /var/run
