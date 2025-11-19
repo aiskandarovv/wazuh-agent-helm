@@ -25,6 +25,7 @@ data:
         <crypto_method>aes</crypto_method>
         <enrollment>
           <enabled>yes</enabled>
+          <groups>{{ .Values.agent.group }}</groups>
           <authorization_pass_path>etc/authd.pass</authorization_pass_path>
         </enrollment>
       </client>

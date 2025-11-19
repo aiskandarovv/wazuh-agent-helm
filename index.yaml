@@ -3,12 +3,12 @@ entries:
   wazuh-agent:
   - apiVersion: v2
     appVersion: 4.13.1
-    created: "2025-11-19T15:43:05.622652+05:00"
+    created: "2025-11-19T16:09:41.077735+05:00"
     description: Wazuh agent deployed as a DaemonSet
-    digest: dec7676f67f73e52f5bd178bef25586042698445a3b3672f565c0645194b76c7
+    digest: 3510c81054530f7095595d99ec06a27df4db8e4a70d2bf405ef89b3125c0fb32
     name: wazuh-agent
     type: application
     urls:
     - https://harrow1ng.github.io/wazuh-agent-helm/wazuh-agent-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-19T15:43:05.622217+05:00"
+generated: "2025-11-19T16:09:41.077223+05:00"
