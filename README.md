@@ -9,7 +9,7 @@ Deploy the **Wazuh Agent** as a **DaemonSet** in Kubernetes using Helm.
 Add the Helm repository to your local Helm client:
 
 ```bash
-helm repo add wazuh-agent https://harrow1ng.github.io/wazuh-agent-helm/
+helm repo add wazuh-agent https://aiskandarovv.github.io/wazuh-agent-helm/
 helm repo update
 ```
 Install the chart with default values:
